@@ -1,0 +1,8 @@
+New-VHD -Path "C:\Hyper-V\UbuntuVM1.vhdx" -SizeBytes 30GB -Dynamic
+
+New-VM -Name "Ubuntu-VM1" -MemoryStartupBytes 2048MB -BootDevice CD -Path "C:\Hyper-V" -VHDPath "C:\Hyper-V\UbuntuVM1.vhdx" -SwitchName "Default Switch" -Generation 1 -Verbose
+
+Set-VMDvdDrive -VMName "Ubuntu-VM1" -Path "C:\Users\theor\OneDrive\Desktop\ISO\ubuntu-22.04.1-desktop-amd64.iso"
+
+Start-VM -Name "Ubuntu-VM1"
+

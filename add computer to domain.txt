@@ -1,0 +1,5 @@
+Power shell to add user to domain
+
+Add-Computer -DomainName <domainname.com> -Restart
+
+\\WAS3-PROJ-SVR1\Staff

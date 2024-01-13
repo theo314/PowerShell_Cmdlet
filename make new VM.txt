@@ -1,0 +1,5 @@
+New-VM -Name "Windows 10 VM" -MemoryStartupBytes 4GB -BootDevice CD -Path "C:\Hyper-V" -VHDPath "C:\Hyper-V\Windows10.vhdx" -SwitchName "Internal Network" -Generation 2 -Verbose
+
+Set-VMDvdDrive -VMName "Windows 10 VM" -Path "C:\ISOs\Windows10.iso"
+
+Start-VM -Name "Windows 10 VM"
